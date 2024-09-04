@@ -13,3 +13,11 @@ En este laboratorio, se utilizó una interfaz, como se muestra en la imagen, con
 
 <img src="https://github.com/user-attachments/assets/2f53232e-810a-4017-bbd7-aece4d0d962c" alt="Descripción de la imagen" width="600"/>
 
+Se van cargan los tres archivos de audio, en donde ("Audio 1.wav" y "Audio 3.wav") son los audios de las dos personas hablando y el ("Audio 3.wav") es el audio del ruido. Aquí estamos abriendo tres archivos de audio usando la librería librosa para el análisis y procesamiento de audio:
+
+```python
+audio_original1, sr = librosa.load('Audio 1.wav')
+audio_original2, sr = librosa.load('Audio 3.wav')
+ruido, _ = librosa.load('Audio 2.wav')
+```
+
