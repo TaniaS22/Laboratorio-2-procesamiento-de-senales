@@ -33,3 +33,40 @@ ruido = ruido / np.max(np.abs(ruido))
 Se realizó el cálculo del SNR (Relación Señal-Ruido) para evaluar la calidad de la señal después de aplicar el procesamiento de audio, comparándola con la señal de ruido. Un SNR más alto indica una señal más clara en relación con el ruido. En nuestro caso, el SNR del primer audio es de **17.16 dB**, lo que sugiere una buena relación señal-ruido. El SNR del segundo audio es de **22.50 dB**, que indica una relación aún mejor, sugiriendo que el segundo audio es más claro. La señal filtrada tiene un SNR de **11.54 dB** en comparación con la señal original, lo que indica que el procesamiento mejoró la relación señal-ruido en comparación con el estado inicial. Estos valores muestran que el procesamiento ha sido efectivo, mejorando la claridad del audio, aunque aún hay margen para mejorar el SNR.<br>
 Para ver cómo cambia la amplitud de la señal de audio a medida que pasa el tiempo, se realizó la gráfica del análisis. Esto ayuda a visualizar el contenido del audio, como los picos que podrían representar palabras o sonidos importantes.
 
+# Instrucciones para el usuario 
+Para evitar problemas se le recomienda al usuario usar la versión 3.10 de Python y no modificar nada de lo que no se menciona en los siguientes pasos, ya que el código generará las demás cosas de manera automática. Además, se recomienda usar solo 2 microfonos con una sola interfaz, ya que así se duplicarían los factores de la experimentación y se evitan errores.
+1. Realizar la grabación de la fiesta o del entorno con varias voces, asegurándose que el archivo de audio sea del formato .wav y que se haya grabado el ruido ambiente con la misma duración de los audios(puede ser después de los audios), todo con los mismos instrumentos, las mismas configuraciones y en la misma posición.
+2. Importar las siguientes librerías luego de instalarlas previamente, para instalar usar en la consola el siguiente comando: “pip install ‘nombre de la libreria’”
+   
+```python
+import numpy as np
+import librosa
+from scipy.signal import wiener
+import soundfile as sf
+import matplotlib.pyplot as plt
+
+```
+3. Cargar los datos tomados anteriormente de la siguiente forma (línea 49, 50 y 15 del código)
+```python
+audio_original1, sr = librosa.load('nombre del archivo de audio 1(micrófono 1).wav')
+audio_original2, sr = librosa.load('nombre del archivo de audio 1(micrófono 2).wav')
+ruido, _ = librosa.load('nombre del archivo de audio del ruido.wav’)
+```
+4. Una vez realizado este procedimiento, el programa generará el SNR de ambos audios con respecto al ruido, para esto, si el SNR da menor de 10 probablemente se tenga que regrabar los audios(se recomienda hacer una prueba previa y de ser posible grabar el ruido ambiente al terminar ya que tiene que ser del mismo tiempo que las otras muestras).
+5. El programa generará automáticamente las gráficas de los audios obtenidos y posteriormente hará la transformada de fourier y también mostrará la gráfica de este.
+6. Si todo funcionó correctamente, podrá observar un SNR mayor a 10 en el audio filtrado y obtendrá las 4 gráficas en función de la frecuencia de: el audio 1, audio 2, ruido y audio filtrado.
+### Uso 
+Por favor, cite este artículo:
+<br>
+Lopez L., Sandoval R. (2024). Github 'Laboratorio 1 Procesamiento de señales'[Online].
+### Informacion de contacto
+est.fabiana.lopez@unimilitar.edu.co
+<br>
+est.tania.sandoval@unimilitar.edu.co
+
+
+
+
+
+
+
