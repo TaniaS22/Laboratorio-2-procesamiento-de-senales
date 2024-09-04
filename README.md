@@ -21,3 +21,11 @@ audio_original2, sr = librosa.load('Audio 3.wav')
 ruido, _ = librosa.load('Audio 2.wav')
 ```
 
+También se va a ajusta el volumen de cada archivo de audio para que todos estén en un rango similar para que sus valores estén entre -1 y 1:
+
+```python
+audio_original1 = audio_original1 / np.max(np.abs(audio_original1))
+audio_original2 = audio_original2 / np.max(np.abs(audio_original2))
+ruido = ruido / np.max(np.abs(ruido))
+```
+
