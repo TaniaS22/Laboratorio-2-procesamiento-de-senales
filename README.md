@@ -58,7 +58,7 @@ ruido, _ = librosa.load('nombre del archivo de audio del ruido.wav’)
 ### Uso 
 Por favor, cite este artículo:
 <br>
-Lopez L., Sandoval R. (2024). Github 'Laboratorio 1 Procesamiento de señales'[Online].
+Lopez L., Sandoval R. (2024). Github 'Laboratorio 2 Procesamiento de señales: problema del coctel'[Online].
 ### Informacion de contacto
 est.fabiana.lopez@unimilitar.edu.co
 <br>
