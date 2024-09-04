@@ -5,7 +5,7 @@ El propósito del presente laboratorio es profundizar las técnicas estadística
 <br>
 Para cumplir con todos los objetivos se utilizó el lenguaje de programación Python, en el cual se realizó la importación, muestra y tratamiento de los datos mencionados anteriormente(**para terceros se recomienda usar el software "Anaconda Navigator con su herramienta "Spider"**), al final de este repositorio se encontraran las instrucciones para poder usar el código de manera adecuada.
 ## Procedimiento 
-##Primera parte
+## Primera parte
 En este laboratorio, se utilizó una interfaz, como se muestra en la imagen, con dos micrófonos situados en diferentes partes de un salón. Estos micrófonos capturaron las señales de audio mientras Fabian y Tania hablaban simultáneamente, simulando el problema conocido como efecto cóctel. Las señales de audio fueron grabadas utilizando la aplicación Audacity, y posteriormente se descargaron tres archivos de audio (ruido, audio del primer micrófono y audio del segundo micrófono) en formato WAV.<br>
 
 <img src="https://github.com/user-attachments/assets/2f53232e-810a-4017-bbd7-aece4d0d962c" alt="Descripción de la imagen" width="600"/>
