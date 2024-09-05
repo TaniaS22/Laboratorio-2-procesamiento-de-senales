@@ -54,8 +54,15 @@ Después del beamforming, se utiliza el filtro Wiener para eliminar el ruido del
 clean_audio = wiener(beamformed_signal)
 ```
 ### Quinta parte
-Se realizó el cálculo del SNR (Relación Señal-Ruido) para evaluar la calidad de la señal después de aplicar el procesamiento de audio, comparándola con la señal de ruido. Un SNR más alto indica una señal más clara en relación con el ruido. En nuestro caso, el SNR del primer audio es de **17.16 dB**, lo que sugiere una buena relación señal-ruido. El SNR del segundo audio es de **22.50 dB**, que indica una relación aún mejor, sugiriendo que el segundo audio es más claro. La señal filtrada tiene un SNR de **11.54 dB** en comparación con la señal original, lo que indica que el procesamiento mejoró la relación señal-ruido en comparación con el estado inicial. Estos valores muestran que el procesamiento ha sido efectivo, mejorando la claridad del audio, aunque aún hay margen para mejorar el SNR.<br>
-Para ver cómo cambia la amplitud de la señal de audio a medida que pasa el tiempo, se realizó la gráfica del análisis. Esto ayuda a visualizar el contenido del audio, como los picos que podrían representar palabras o sonidos importantes.
+Se realizó el cálculo del SNR (Relación Señal-Ruido) para evaluar la calidad de la señal después de aplicar el procesamiento de audio, comparándola con la señal de ruido. Un SNR más alto indica una señal más clara en relación con el ruido. En nuestro caso, las señales originales tienen una buena calidad en comparación con el ruido, con SNRs de 30.681 dB y 26.208 dB, lo que indica una señal clara. Sin embargo, después del proceso de filtrado, el SNR cae a 9.092 dB, lo que sugiere una caída de la calidad de la señal. Esto podría deberse a la pérdida de información durante el filtrado o el ruido que no se eliminó completamente.
+
+### Sexta parte
+
+Dado que ya se ha aplicado el procesamiento, se guarda el archivo en formato WAV. Y se escucha el archivo "output_mvdr_beamformed.wav" que se ha generado para mirar el resultado.
+
+```python
+sf.write('output_mvdr_beamformed.wav', clean_audio, sr)
+```
 
 # Instrucciones para el usuario 
 Para evitar problemas se le recomienda al usuario usar la versión 3.10 de Python y no modificar nada de lo que no se menciona en los siguientes pasos, ya que el código generará las demás cosas de manera automática. Además, se recomienda usar solo 2 microfonos con una sola interfaz, ya que así se duplicarían los factores de la experimentación y se evitan errores.
